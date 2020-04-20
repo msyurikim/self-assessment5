@@ -13,4 +13,4 @@ User.sync({ force: true })
       console.log('node-express-sequelize listening on ' + port);
     });
   });
-  
+
