@@ -11,7 +11,7 @@ var User = sequelize.define('User', {
     a GET request with all users in the database */
 
 //express.Router().get
-app.get = ('/users', (req, res) => {
+app.get('/users', (req, res) => {
   sequelize.User.findAll()
     .then((users) => {
       res.json(users);
