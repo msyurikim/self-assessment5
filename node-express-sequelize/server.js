@@ -10,8 +10,9 @@ var User = sequelize.define('User', {
 /*  Create a '/users' route that responds to
     a GET request with all users in the database */
 
-//express.Router().get
-app.get('/users', (req, res) => {
+//express.Router().get =
+//app.get
+express.Router().get = ('/users', (req, res) => {
   sequelize.User.findAll()
     .then((users) => {
       res.json(users);
