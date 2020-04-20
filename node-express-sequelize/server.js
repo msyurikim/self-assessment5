@@ -10,8 +10,6 @@ var User = sequelize.define('User', {
 /*  Create a '/users' route that responds to
     a GET request with all users in the database */
 
-//express.Router().get =
-//app.get --> can't find findAll of User??
 // express.Router().get = ('/users', (req, res) => {
 //   sequelize.User.findAll()
 //     .then((users) => {
@@ -20,13 +18,11 @@ var User = sequelize.define('User', {
 //     });
 // });
 
-app.get('/users', (req, res) => {
-  User.findAll()
+app.get('/users', (req, res) => { //express
+  User.findAll()  //sequelize
     .then((users) => {
       res.json(users);
       res.status(200).end();
-      // res.end(JSON.stringify(users));
-      //res.send(users);
     });
 });
 
