@@ -15,8 +15,7 @@ app.Router().get = ('/users', (req, res) => {
       .then((users) => {
         res.json(users);
       });
-  };
-);
+});
 
 
 
